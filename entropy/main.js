@@ -3,7 +3,6 @@ const fs = require('fs')
 const inputString = fs.readFileSync('input.txt', 'utf8')
 const map = new Map()
 
-// console.log(inputString)
 let count = 0
 let sum = 0
 
@@ -13,7 +12,6 @@ for (let i = 0; i < inputString.length; i++) {
 		map.set(inputString[i], count)
 	}
 }
-
 
 for (const [key, value] of map) {
 	pI = value / inputString.length
