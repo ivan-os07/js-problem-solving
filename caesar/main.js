@@ -19,6 +19,7 @@ function encodeLetters(k, symb) {
 	}
 
 	let range = end - start + 1
+	// второй % гарантирует что выражение будет неотрицательным
 	let newNumSymb = ((((numSymb - start + k) % range) + range) % range) + start
 
 	return String.fromCharCode(newNumSymb)
