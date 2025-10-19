@@ -5,7 +5,7 @@ const fs = require('fs')
 const inputSubString = fs.readFileSync(args[0], 'utf8') // подстрока
 let inputString = fs.readFileSync(args[1], 'utf8') // большая строка
 
-// функция приним строку и возвр сумму кодов этой строки
+// функция принимает строку и возвращает сумму ASCII кодов этой строки
 function simple_hash(str) {
 	let s = 0
 
@@ -21,7 +21,7 @@ const l_SubString = inputSubString.length // длина подстроки
 // сумма первого слайса
 let sumSlice = simple_hash(inputString.slice(0, l_SubString))
 
-// первый и последний + 1 символы слайса
+// первый и следующий после последнего символы слайса
 let first_symb
 let next_symb
 
@@ -39,16 +39,6 @@ for (let i = 0; i <= inputString.length - l_SubString; i++) {
 			break
 		}
 	}
-
-	// if (i != inputString.length - l_SubString) {
-	// 	first_symb = inputString[i].charCodeAt(0)
-	// 	next_symb = inputString[i + l_SubString].charCodeAt(0)
-
-	// 	sumSlice = sumSlice - first_symb + next_symb
-	// } else {
-	// 	console.log('Lose')
-	// 	break
-	// }
 
 	if (i == inputString.length - l_SubString) {
 		console.log('Lose')
