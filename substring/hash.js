@@ -34,7 +34,7 @@ for (let i = 0; i <= inputString.length - l_SubString; i++) {
 
 		if (inputSubString === contender) {
 			console.log('You win')
-			console.log(i, i + l_SubString - 1)
+			console.log({ start: i, end: i + l_SubString - 1 })
 			// ищем первое вхождение, поэтому выходим из цикла
 			break
 		}
