@@ -9,7 +9,7 @@ const inputString = fs.readFileSync(args[1], 'utf8')
 function rleEncode(str) {
 	// Однобуквенные строчки
 	if (str.length === 1) {
-		return о + str
+		return str
 	}
 
 	let result = ''

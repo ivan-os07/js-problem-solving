@@ -72,7 +72,6 @@ function find_substrng(substr, big_str) {
 	}
 
 	if (!flag) console.log('Lose')
-	console.log(matrix)
 }
 
 find_substrng(inputSubString, inputString)
