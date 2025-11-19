@@ -1,0 +1,22 @@
+read
+store n
+push 1
+store res
+
+L1:
+load n
+jz L2
+load res
+load n
+mul
+store res
+load n
+push 1
+sub
+store n
+jmp L1
+
+L2:
+load res
+print
+halt

@@ -1,0 +1,28 @@
+read
+store n
+push 0
+store a
+push 1
+store b
+
+L1:
+load n
+jz L2
+load a
+print
+load a
+load b
+add
+store temp
+load b
+store a
+load temp
+store b
+load n
+push 1
+sub
+store n
+jmp L1
+
+L2:
+halt

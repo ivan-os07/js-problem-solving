@@ -1,0 +1,24 @@
+read
+store a
+read
+store b
+
+L1:
+load b
+jz L2
+load a
+load b
+mod
+store a
+load b
+store tmp
+load a
+store b
+load tmp
+store a
+jmp L1
+
+L2:
+load a
+print
+halt
